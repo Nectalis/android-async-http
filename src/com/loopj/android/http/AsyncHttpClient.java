@@ -102,8 +102,8 @@ public class AsyncHttpClient {
     private static int maxConnections = DEFAULT_MAX_CONNECTIONS;
     private static int socketTimeout = DEFAULT_SOCKET_TIMEOUT;
 
-    private final DefaultHttpClient httpClient;
-    private final HttpContext httpContext;
+    protected final DefaultHttpClient httpClient;
+    protected final HttpContext httpContext;
     private ThreadPoolExecutor threadPool;
     private final Map<Context, List<WeakReference<Future<?>>>> requestMap;
     private final Map<String, String> clientHeaderMap;
@@ -584,7 +584,7 @@ public class AsyncHttpClient {
         return url;
     }
 
-    private HttpEntity paramsToEntity(RequestParams params) {
+    protected HttpEntity paramsToEntity(RequestParams params) {
         HttpEntity entity = null;
 
         if(params != null) {

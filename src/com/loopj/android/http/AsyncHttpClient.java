@@ -584,7 +584,7 @@ public class AsyncHttpClient {
         return url;
     }
 
-    private HttpEntity paramsToEntity(RequestParams params, AsyncHttpResponseHandler responseHandler) {
+    protected HttpEntity paramsToEntity(RequestParams params, AsyncHttpResponseHandler responseHandler) {
         HttpEntity entity = null;
 
         if(params != null) {

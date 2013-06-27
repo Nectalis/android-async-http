@@ -4,6 +4,8 @@ MANIFEST.MF
 build.num
 build
 local.properties
+project.properties
+*.iml
 bin/
 gen/
 _layouts
